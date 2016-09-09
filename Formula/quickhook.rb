@@ -1,8 +1,8 @@
 class Quickhook < Formula
   desc "Fast, Unix'y, opinionated Git hook runner"
   homepage "https://github.com/dirk/quickhook"
-  url "https://github.com/dirk/quickhook/archive/v0.1.2.tar.gz"
-  sha256 "d64f1ef03c89db21911a8ebeb23ab604c8bb96eea5657b4a4df5047c76004776"
+  url "https://github.com/dirk/quickhook/archive/v1.0.0.tar.gz"
+  sha256 "c961e71b6bfa8730d3ff927b5940544a7054491ad59b90b68b95d8e93c0b09b8"
 
   depends_on "glide" => :build
   depends_on "go" => :build
