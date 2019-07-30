@@ -1,21 +1,22 @@
 class Quickhook < Formula
   desc "Fast, Unix'y, opinionated Git hook runner"
   homepage "https://github.com/dirk/quickhook"
-  url "https://github.com/dirk/quickhook/archive/v1.3.0.tar.gz"
-  sha256 "186ae654464b39ba2e75dbe361d820d255826a7d20e400ce74bdc1b31b5f8e2d"
+  url "https://github.com/dirk/quickhook/archive/v1.4.0.tar.gz"
+  sha256 "1efa722ad02e868c6e53d771c581ba2978df7c3427291f65600717eed36bd079"
 
-  depends_on "glide" => :build
   depends_on "go" => :build
 
   def install
     ENV["GOPATH"] = buildpath
-    ENV["GLIDE_HOME"] = (buildpath/".glide")
+    ENV["GO111MODULE"] = "on"
 
     dir = buildpath/"src/github.com/dirk/quickhook"
-    dir.install Dir["*"]
+    dir.install buildpath.children
+
     cd dir do
-      system "glide", "install"
-      system "go", "build", "-o", bin/"quickhook"
+      system "go", "mod", "vendor"
+      system "go", "build"
+      bin.install "quickhook"
     end
   end
 
