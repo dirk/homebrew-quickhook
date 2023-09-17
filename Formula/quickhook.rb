@@ -1,8 +1,8 @@
 class Quickhook < Formula
   desc "Faster Git hook runner"
   homepage "https://github.com/dirk/quickhook"
-  url "https://github.com/dirk/quickhook/archive/v1.5.0.tar.gz"
-  sha256 "b32ab57c2bd65b64546bc66b2213b101b13e4063321283901b999dbf820e37a4"
+  url "https://github.com/dirk/quickhook/archive/v1.6.1.tar.gz"
+  sha256 "cda278c119e8f981b5c38ef776957a92f5d99042097aad4c839ab040772d9485"
   license "BSD-3-Clause"
   head "https://github.com/dirk/quickhook.git", branch: "main"
 
