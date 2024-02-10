@@ -8,14 +8,14 @@ This is a Homebrew [tap][] for the [quickhook][] Git hook runner.
 ```sh
 brew tap dirk/quickhook
 # ==> Tapping dirk/quickhook
-# Cloning into '/usr/local/Homebrew/Library/Taps/dirk/homebrew-quickhook'...
+# Cloning into '/opt/homebrew/Library/Taps/dirk/homebrew-quickhook'...
 # ...
-# Tapped 1 formula (28 files, 28KB).
+# Tapped 1 formula (14 files, 13.2KB).
 
 brew install quickhook
-# ==> Installing quickhook from dirk/quickhook
+# ==> Fetching dirk/quickhook/quickhook
 # ...
-# /usr/local/Cellar/quickhook/1.4.0: 3 files, 3.7MB, built in 9 seconds
+# /opt/homebrew/Cellar/quickhook/1.6.2: 5 files, 3.3MB, built in 1 second
 
 quickhook hook pre-commit
 # No files to be committed!

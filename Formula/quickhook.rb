@@ -1,8 +1,8 @@
 class Quickhook < Formula
   desc "Faster Git hook runner"
   homepage "https://github.com/dirk/quickhook"
-  url "https://github.com/dirk/quickhook/archive/v1.6.1.tar.gz"
-  sha256 "cda278c119e8f981b5c38ef776957a92f5d99042097aad4c839ab040772d9485"
+  url "https://github.com/dirk/quickhook/archive/v1.6.2.tar.gz"
+  sha256 "6999d01fbae8c9a7f285cfdf35e47663e95f88056e9009c42223b4d1dc4d92ab"
   license "BSD-3-Clause"
   head "https://github.com/dirk/quickhook.git", branch: "main"
 
@@ -13,6 +13,6 @@ class Quickhook < Formula
   end
 
   test do
-    assert_equal version.to_s, shell_output("#{bin}/quickhook --version").strip
+    assert_equal "v#{version.to_s}", shell_output("#{bin}/quickhook --version").strip
   end
 end
